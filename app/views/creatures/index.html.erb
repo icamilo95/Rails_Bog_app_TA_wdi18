@@ -10,9 +10,9 @@
 
 <% @creatures.each do |creature| %>
    <div>
-      Name: <%= creature.name %> <br>
-      Description: <%= creature.description %>
-      
+      Name: <%=link_to creature.name, "/creatures/#{creature.id}/edit", method: :get  %>
+      <br>
+      Description: <%= creature.description %>      
       <hr>
    </div>
 <% end %>
