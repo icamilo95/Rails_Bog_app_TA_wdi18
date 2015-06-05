@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Bog App</title>
+</head>
+<body>
+   
+   <%= form_for @creature do |f| %>
+         <p>Name: <%= f.text_field :name %></p>
+         <p>Description: <%= f.text_area :description %></p>
+         <%= f.submit "Save Creature" %>
+   <% end %>
+
+   <form action="/" method="get">
+      <button type="submit">Return to Index</button>
+   </form>
+
+</body>
+</html>
